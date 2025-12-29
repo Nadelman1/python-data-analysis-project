@@ -18,7 +18,7 @@ The data is stored in `data/sample_data.csv`.
 - Calculates average income grouped by the target variable
 
 ## Key Insight
-In this dataset, individuals with a target value of 1 have a higher average income than those with a target value of 0. This demonstrates how simple grouping and aggregation can reveal relationships in structured data.
+In this dataset, individuals with a target value of 1 have a higher average income than those with a target value of 0. This demonstrates how simple grouping can reveal relationships in structured data.
 
 ## Tools Used
 - Python
