@@ -6,20 +6,18 @@ def main():
     # Load dataset
     df = pd.read_csv("data/sample_data.csv")
 
-    # Show a quick preview
     print("=== Preview (first 5 rows) ===")
-    print(df.head(), end="\n\n")
+    print(df.head())
 
-    # Basic info
-    print("=== Shape ===")
-    print(f"Rows: {df.shape[0]}, Columns: {df.shape[1]}", end="\n\n")
+    print("\n=== Shape ===")
+    print(f"Rows: {df.shape[0]}, Columns: {df.shape[1]}")
 
-    print("=== Column Types ===")
-    print(df.dtypes, end="\n\n")
+    print("\n=== Missing Values ===")
+    print(df.isnull().sum())
 
-    # If your dataset has a numeric column, this gives summary stats
-    print("=== Summary Stats (numeric columns) ===")
-    print(df.describe())
+    print("\n=== Average Income by Target ===")
+    avg_income = df.groupby("target")["income"].mean()
+    print(avg_income)
 
 if __name__ == "__main__":
     main()
