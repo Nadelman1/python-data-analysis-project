@@ -1,4 +1,7 @@
 # Python Data Analysis Project
 # This file will contain data loading, cleaning, and analysis code.
+import pandas as pd
 
-print("Project setup complete")
+df = pd.read_csv("data/sample_data.csv")
+
+print(df)
